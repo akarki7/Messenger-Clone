@@ -2,37 +2,42 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app__form{
+  padding: 20px;
+  position: fixed;
+  bottom:0; 
+  z-index:1;
+  width: 90%;
+  margin:20px;
+  background-color: #e9e9eb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 
+position:fixed; -> fixes the position of the input field
+bottom:0; stays at the bottom; 20px -> 20px above from the bottom 
+z-index:1; -> gives it priority over other class that have default z-index=0 and comes in front of others
+witdth:100%; -> input field covers the whole screen/page*/
+
+.app__formControl{
+  display: flex !important;
+  flex-direction:row !important; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* 
+display:flex; -> together 
+flex-direction:row; -> in same row side by side
+used !important to overule the material-ui disabling our display:flex property*/
+
+.app__iconButton{
+  flex:0;
 }
 
-.App-link {
-  color: #61dafb;
+.app__Input{
+  flex:1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* 
+flex:0; -> we want the button to take only the needed space and leave everything else for others to fit
+flex:1; -> we want input field to take much field/area as we can 
+(in this way do not need to set custom width=400px); becomes responsive to al screen sizes
+ */

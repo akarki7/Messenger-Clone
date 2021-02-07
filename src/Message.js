@@ -1,21 +1,21 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import { Card, CardContent,Typography} from '@material-ui/core';
 import './Message.css'; 
 
-function Message({username,message}) {
+const Message= forwardRef(({username,message}, ref) => {
     const isUser=username == message.username;
     return (
-        <div className={`message ${isUser && 'message_user'}`}>
-            <Card className={isUser ? "message_userCard" : "message_guestCard"}> 
+        <div ref={ref} className={`message ${isUser && 'message_user'}`}>
+            <Card className={isUser ? "message__userCard" : "message__guestCard"}> 
             <CardContent>
                 <Typography color="white" variant="h5" component="h2">
-                    {message.username}:{message.text}
+                    {!isUser && `${message.username}:`}{message.message}
                 </Typography>
             </CardContent>
             </Card>
         </div>
     )
-}
+})
 
 export default Message
 
@@ -28,3 +28,7 @@ export default Message
 
 //className={isUser ? "message_userCard" : "message_guestCard"}
 // if it isUser use message_userCard else use message_guestCard (like ? in c/c++)
+
+
+// {!isUser && `${message.username}:`}{message.message}
+//if it is not(!) current user then display their name else do not display the name as you are yourself
