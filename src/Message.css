@@ -1,0 +1,21 @@
+.message{
+    padding: 10px;
+    margin: 10px;  /* space between each message block */
+    width: fit-content;
+}
+
+/* for shifting the current users messages to the right so that the user can differentiate his message with others message easily */
+.message_user{
+    margin-left:auto;
+    color:white;
+    text-align:left !important;
+}
+
+.message_userCard{
+    background-color: #0b81ff !important;
+}
+
+.message_guestCard{
+    background-color: #e9e9eb !important;
+}
+

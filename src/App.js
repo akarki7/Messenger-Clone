@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Button,FormControl, InputLabel, Input,Card} from '@material-ui/core';
+import { Button,FormControl, InputLabel, Input} from '@material-ui/core';
 import './App.css';
 import Message from './Message';
 
@@ -46,8 +46,12 @@ function App() {
 
         {
           messages.map(message => ( //map acts like a loop and returns the output that we want (loop+return)
-            <Message username={message.username} text={message.text}/>//sending the messages to Message.js using the props variable 'text';  to change the styling of the messages being displayed
+            <Message username={username} message={message}/>//sending the messages to Message.js using the props variable 'text';  to change the styling of the messages being displayed
             //message is the loop variable that goes through each element of messages array
+            
+            //Update:
+            //we want to separate our messages from others messages so we pass the username of the person logged in and 
+            //the message which can be others message as well and we check if the username passed and username of message match and then display it as we need
           ))
         }
     </div>
