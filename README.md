@@ -1,5 +1,15 @@
 Link to project: https://messenger-clone-446ce.web.app/
 
+Created a simple Messenger app where users from all over the world can send messages to each other and chat.
+I have used main three services for this app: ReactJS, Firebase and Material-UI.
+
+The main designing of the website has been done using ReactJs and Material-UI and the real time quick database has been setup through
+firebase.
+
+The users can basically enter their Username which is saved the next time they want to send message again. Then they write messages to a messagebox and send them.
+Since I have used ReactJS the website shows realtime update without needing to refresh and the firbase backend is realtime too. All the fancy buttons and designing has been done using the Material-UI components.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
